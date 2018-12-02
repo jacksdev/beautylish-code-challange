@@ -17,6 +17,7 @@ const introDiv = {
   background: '#fff',
   color: '#f0725d',
   fontSize: '7.2rem',
+  fontFamily: 'CanelaWeb'
 }
 
 const HeroArea = (props) => (

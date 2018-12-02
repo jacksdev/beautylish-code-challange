@@ -34,18 +34,21 @@ class CodeChallangeApp extends React.Component{
 // !!!! --- RENDER ---!!!
 
   render(){
-    const title ="Code Challange";
-    const subtitle = "Get these done and then you can chill.";
 
-    console.log(dataSource);
+    const {
+      brand,
+      product,
+      variants,
+      general
+    } = dataSource;
 
     return (
       <div>
-        <LogoBar />
+        <LogoBar brand={brand} />
         <HeroArea />
-        <SectionIntro />
-        <ProductList />
-        <Footer />
+        <SectionIntro product={product} />
+        <ProductList variants={variants}/>
+        <Footer data={general}  />
       </div>
     );
   };

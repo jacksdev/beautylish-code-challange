@@ -11,9 +11,27 @@ const footerDiv = {
 
 
 
-const Footer = (props) => (
+const Footer = ({ data }) => (
   <div style={footerDiv}>
-    Footer
+    {data.headline}
+    <div>
+      {data.subhead_1}
+      <p>
+      {data.copy_1}
+      </p>
+    </div>
+    <div>
+      {data.subhead_2}
+      <p>
+      {data.copy_2}
+      </p>
+    </div>
+    <div>
+      {data.subhead_3}
+      <p>
+      {data.copy_3}
+      </p>
+    </div>
   </div>
 
 );

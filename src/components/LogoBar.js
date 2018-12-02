@@ -19,11 +19,11 @@ const logoBlurb = {
   margin: '10px 0 0 10px'
 }
 
-const LogoBar = (props) => (
+const LogoBar = ({ brand }) => (
   <div style={divStyle}>
     <img src={mainLogo} style={imgStyle} alt="Logo" />
     <div style={logoBlurb}>
-      BY TERRY
+      {brand.name}
     </div>
   </div>
 
