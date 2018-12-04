@@ -26,10 +26,8 @@ class CodeChallangeApp extends React.Component{
         <LogoBar brand={brand} />
         <HeroArea />
         <SectionIntro product={product} />
-        <ProductList
-          variants={variants}
-        />
-        <Footer data={general}  />
+        <ProductList variants={variants} />
+        <Footer data={general} />
       </div>
     );
   };

@@ -8,6 +8,7 @@ import ProductItem from './ProductItem';
 const ProductList = ({variants, handleAddItem, isAdding}) => (
   <div>
     {
+      //iterate over variant array and build out items
       variants.map((item , index) => (
         <ProductItem
           key={index}

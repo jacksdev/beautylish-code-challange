@@ -13,8 +13,6 @@ const productListDiv = {
   display: 'flex'
 }
 
-
-
 function ProductItem({
   cid,
   name,
@@ -24,28 +22,38 @@ function ProductItem({
   price
 }){
 
+  //define state props and handlers !!experimental syntax not for production
   const [isAdding, disableBttn] = useState(false);
   const [showTooltip, handleShowTool] = useState(false);
+  const [responseName, handleResponseName] = useState('...');
 
+  //strip number and dash from data source
   const strippedName = name.replace(/[\d -]+/g,'')
 
-
+  //Handle 'Add to bag' click
   const handleAddItem = (cid) => {
 
+    //prevent multiple clicks
     disableBttn(true)
+    //reset tooltip hidden class
     handleShowTool(false)
 
+    //set request & headers
     let query = { cid }
     let headers = {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         }
 
+    //post request
     axios.post('https://cors-anywhere.herokuapp.com/https://www.beautylish.com/rest/interview-variant', query, {headers})
       .then((response) => {
+        //reactivate button
         disableBttn(false)
+        //display tooltip
         handleShowTool(true)
-        console.log(response.data);
+        //set response  data in tooltip
+        handleResponseName(response.data.name)
       })
       .catch((error) => {
         console.log(error);
@@ -79,7 +87,7 @@ function ProductItem({
               ADDED
               <br />
               Sun Designer<br />
-              {name}<br />
+              {responseName}<br />
               <button>VIEW BAG</button>
             </span>
           </div>

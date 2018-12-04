@@ -1,0 +1,16 @@
+.logobar{
+  background: #000;
+  height: 40px;
+  color: #fff;
+  display: flex;
+}
+
+.logobar__img{
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+
+.logobar__blurb{
+  font-size: 1.9rem;
+  margin: 10px 0 0 10px;
+}
