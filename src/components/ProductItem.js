@@ -1,17 +1,17 @@
 import React, {useState } from 'react';
 import axios from 'axios';
 
-import savannahImg from'../img/savannah_love_1x.jpg';
-import tropicalImg from'../img/tropical_sunset_1x.jpg';
-
 
 function ProductItem({
   cid,
+  img,
   name,
   shortDescription,
   description,
   size,
-  price
+  price,
+  itemClass,
+  tooltipClass
 }){
 
   //define state props and handlers !!experimental syntax not for production
@@ -20,10 +20,14 @@ function ProductItem({
   const [responseName, handleResponseName] = useState('...');
 
   //strip number and dash from data source
-  const strippedName = name.replace(/[\d -]+/g,'')
+  const strippedName = name.replace(/[\d -]+/g,'');
+  const computedToolTipStyle = tooltipClass;
 
+
+console.log(tooltipClass);
   //Handle 'Add to bag' click
   const handleAddItem = (cid) => {
+
 
     //prevent multiple clicks
     disableBttn(true)
@@ -53,9 +57,9 @@ function ProductItem({
   };
 
   return (
-    <div className='productitem'>
+    <div className={itemClass}>
         <div className='productitem__img'>
-          <img src={tropicalImg}  border='0' />
+          <img src={img}  width='100%' border='0' />
         </div>
 
         <div className='productitem__description'>
@@ -78,7 +82,7 @@ function ProductItem({
               }}>{isAdding ? 'Adding...' : 'Add to bag'}
             </button>
             <span className={
-              showTooltip ? 'tooltiptextVisible' : 'tooltiptextHidden'
+              showTooltip ? computedToolTipStyle : 'tooltiptextHidden'
             }>
               ADDED
               <br />

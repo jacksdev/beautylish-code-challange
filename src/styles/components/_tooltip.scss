@@ -3,7 +3,7 @@
     display: inline-block;
 }
 
-.tooltip .tooltiptextVisible {
+.tooltiptextVisible {
     visibility: visible;
     width: 200px;
     background-color: #fff;
@@ -13,7 +13,7 @@
     padding: 20px 20px;
     position: absolute;
     z-index: 1;
-    right: 110%;
+    right: 115%;
     opacity:0;
     transition-property: opacity;
     transition-duration: 2s;
@@ -21,17 +21,76 @@
 }
 
 
-.tooltip .tooltiptextVisible:after {
+
+.tooltiptextVisible:after,
+.tooltiptextVisible:before {
     content: "";
     position: absolute;
-    top: 11px;
-    left: 100%;
+    top: 20px;
+    left: 99.9%;
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent transparent white;
-    border-left-color: #000;
 }
+
+.tooltiptextVisible:after {
+    top: 15px;
+    border-color: transparent transparent transparent #fff;
+    border-width: 15px;
+}
+
+/* this border color controlls the outside, thin border */
+.tooltiptextVisible:before {
+    top: 14px;
+    border-color: transparent transparent transparent #000;
+    border-width: 16px;
+}
+
 .tooltiptextHidden {
     visibility: hidden;
+}
+
+
+
+.tooltiptextVisible--reverse {
+    visibility: visible;
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    border: 1px solid grey;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+    left: 115%;
+    opacity:0;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-delay: 2s;
+}
+
+
+
+.tooltiptextVisible--reverse:after,
+.tooltiptextVisible--reverse:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 99.9%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.tooltiptextVisible--reverse:after {
+    top: 15px;
+    border-color: transparent #fff transparent transparent;
+    border-width: 15px;
+}
+
+/* this border color controlls the outside, thin border */
+.tooltiptextVisible--reverse:before {
+    top: 14px;
+    border-color: transparent #000 transparent transparent;
+    border-width: 16px;
 }
