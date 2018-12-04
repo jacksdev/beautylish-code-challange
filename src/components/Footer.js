@@ -1,39 +1,32 @@
 import React from 'react';
 
 
-
-const footerDiv = {
-  background: '#fff',
-  padding: '20px',
-  color: '#000',
-  fontSize: '1.4rem'
-}
-
-
-
-const Footer = ({ data }) => (
-  <div style={footerDiv}>
-    {data.headline}
-    <div>
-      {data.subhead_1}
-      <p>
-      {data.copy_1}
-      </p>
-    </div>
-    <div>
-      {data.subhead_2}
-      <p>
-      {data.copy_2}
-      </p>
-    </div>
-    <div>
-      {data.subhead_3}
-      <p>
-      {data.copy_3}
-      </p>
+const Footer = ({ general }) => (
+  <div className='container'>
+    <div className='footer'>
+      <span className='footer__header'>{general.headline}</span>
+      <div className='footer__itemcontainer'>
+        <div className='footer__itemcontainer__items'>
+          <span className='footer__itemcontainer__items__header'>{general.subhead_1}</span>
+          <p>
+          {general.copy_1}
+          </p>
+        </div>
+        <div className='footer__itemcontainer__items'>
+          <span className='footer__itemcontainer__items__header'>{general.subhead_2}</span>
+          <p>
+          {general.copy_2}
+          </p>
+        </div>
+        <div className='footer__itemcontainer__items'>
+          <span className='footer__itemcontainer__items__header'>{general.subhead_3}</span>
+          <p>
+          {general.copy_3}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-
 );
 
 export default Footer;

@@ -1,19 +1,25 @@
-.big-button {
-  background: $purple;
-  border: none;
-  border-bottom: .6rem solid darken($purple, 10%);
-  color: #fff;
+.mainbttn {
+	background-color:#000000;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'MarkWeb';
   font-weight: bold;
-  font-size: $l-size;
-  width: 100%;
-  margin-bottom: $xl-size;
-  padding: 2.4rem;
-  outline: none;
+	font-size:17px;
+	padding:13px 27px;
+	text-decoration:none;
 }
+.mainbttn:hover {
+	background-color:#ffffff;
+  color: #000;
+}
+.mainbttn:active {
+	position:relative;
+	top:1px;
+}
+.mainbttn:focus {outline:0;}
 
-.big-button:disabled {
-  opacity: 0.5;
-}
 
 @media (min-width: $desktop-breakpoint) {
   .big-button {

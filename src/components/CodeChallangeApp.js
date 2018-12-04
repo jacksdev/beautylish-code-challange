@@ -27,7 +27,7 @@ class CodeChallangeApp extends React.Component{
         <HeroArea />
         <SectionIntro product={product} />
         <ProductList variants={variants} />
-        <Footer data={general} />
+        <Footer general={general} />
       </div>
     );
   };

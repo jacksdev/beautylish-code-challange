@@ -1,0 +1,43 @@
+
+.footer{
+  background: #fff;
+  padding: 20px;
+  color: #000;
+  font-size: 1.6rem;
+  font-family: 'MarkWeb';
+}
+
+
+.footer__header{
+  font-size: 3.5rem;
+  font-family: 'CanelaWeb' ;
+}
+
+
+.footer__itemcontainer{
+  padding: 20px 0 50px 0;
+  display: flex;
+}
+
+
+.footer__itemcontainer__items{
+  width: 33%;
+  padding: 0 20px 0 0;
+  margin: 0 20px 0 0;
+  border-right: 1px solid #f0725d;
+}
+
+.footer__itemcontainer div:last-child {
+  border: none;
+}
+
+
+.footer__itemcontainer__items__header{
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.footer__itemcontainer__items__description{
+  font-size: 1.6rem;
+  padding: 80px 0 0 30px;
+  border: 1px solid red;
+}

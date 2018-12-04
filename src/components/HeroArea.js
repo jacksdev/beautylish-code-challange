@@ -1,33 +1,13 @@
 import React from 'react';
-import bgHero from'../img/hero_desktop_1x.jpg';
 
-
-const heroDiv = {
-  background: `url(${bgHero}) no-repeat center center`,
-  backgroundSize: 'auto',
-  backgroundSize: 'cover',
-  textAlign:'center',
-  height: '808px'
-}
-
-const introDiv = {
-  display:'inline-block',
-  marginTop: '350px',
-  padding: '0 40px',
-  background: '#fff',
-  color: '#f0725d',
-  fontSize: '7.2rem',
-  fontFamily: 'CanelaWeb'
-}
 
 const HeroArea = (props) => (
 
-  <div style={heroDiv}>
-    <div style={introDiv}>
+  <div className='heroarea'>
+    <div className='heroarea__blurb'>
       Tropical Sunset Collection
     </div>
   </div>
-
 );
 
 export default HeroArea;

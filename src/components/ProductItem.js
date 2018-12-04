@@ -5,14 +5,6 @@ import savannahImg from'../img/savannah_love_1x.jpg';
 import tropicalImg from'../img/tropical_sunset_1x.jpg';
 
 
-const productListDiv = {
-  background: '#fff',
-  padding: '20px',
-  color: '#000',
-  fontSize: '1.4rem',
-  display: 'flex'
-}
-
 function ProductItem({
   cid,
   name,
@@ -61,22 +53,26 @@ function ProductItem({
   };
 
   return (
-    <div style={productListDiv}>
-        <div>
+    <div className='productitem'>
+        <div className='productitem__img'>
           <img src={tropicalImg}  border='0' />
         </div>
-        <div>
-          <h1>{strippedName}</h1>
-          <h3>{shortDescription}</h3>
+
+        <div className='productitem__description'>
+          <span className='productitem__header'>{strippedName}</span><br />
+          {shortDescription}
           <p>
             {description}
           </p>
-          {size}<br />
-          {price}
+          {size}
+          <br />
+          <br />
+          <b>{price}</b>
           <br />
           <br />
           <div className="tooltip">
             <button
+              className='mainbttn'
               onClick={(e) => {
                 handleAddItem(cid)
               }}>{isAdding ? 'Adding...' : 'Add to bag'}
@@ -88,11 +84,11 @@ function ProductItem({
               <br />
               Sun Designer<br />
               {responseName}<br />
-              <button>VIEW BAG</button>
+              <button className='mainbttn'>VIEW BAG</button>
             </span>
           </div>
-
         </div>
+
       </div>
   )
 };

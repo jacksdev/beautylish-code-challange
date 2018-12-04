@@ -6,7 +6,7 @@ import ProductItem from './ProductItem';
 
 
 const ProductList = ({variants, handleAddItem, isAdding}) => (
-  <div>
+  <div className='container'>
     {
       //iterate over variant array and build out items
       variants.map((item , index) => (

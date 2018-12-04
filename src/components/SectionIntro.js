@@ -1,21 +1,14 @@
 import React from 'react';
 
 
-
-const sectionIntroDiv = {
-  background: '#fff',
-  padding: '20px',
-  color: '#000',
-  fontSize: '1.4rem'
-}
-
-
-
 const SectionIntro = ({ product }) => (
-  <div style={sectionIntroDiv}>
-    Limited Edition {product.name}
-    <br />
-    {product.description}
+  <div className="container">
+    <div className='sectionintro'>
+      BY TERRY
+      <span className='sectionintro__headline'>Limited Edition {product.name}</span>
+      <br />
+      {product.description}
+    </div>
   </div>
 );
 
