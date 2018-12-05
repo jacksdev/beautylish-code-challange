@@ -80,7 +80,7 @@ function ProductItem({
               }}>{isAdding ? 'Adding...' : 'Add to bag'}
             </button>
             <span className={
-              showTooltip ? computedToolTipStyle : 'tooltiptextHidden'
+              showTooltip ? 'tooltiptextVisible--reverse' : 'tooltiptextHidden'
             }>
               ADDED
               <br /><br />
