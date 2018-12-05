@@ -23,11 +23,8 @@ function ProductItem({
   const strippedName = name.replace(/[\d -]+/g,'');
   const computedToolTipStyle = tooltipClass;
 
-
-console.log(tooltipClass);
   //Handle 'Add to bag' click
   const handleAddItem = (cid) => {
-
 
     //prevent multiple clicks
     disableBttn(true)
@@ -76,8 +73,9 @@ console.log(tooltipClass);
           <br />
           <div className="tooltip">
             <button
+              disabled={isAdding}
               className='mainbttn'
-              onClick={(e) => {
+              onClick={() => {
                 handleAddItem(cid)
               }}>{isAdding ? 'Adding...' : 'Add to bag'}
             </button>
@@ -85,9 +83,11 @@ console.log(tooltipClass);
               showTooltip ? computedToolTipStyle : 'tooltiptextHidden'
             }>
               ADDED
+              <br /><br />
+              Sun Designer
               <br />
-              Sun Designer<br />
-              {responseName}<br />
+              <b>{responseName}</b>
+              <br /><br />
               <button className='mainbttn'>VIEW BAG</button>
             </span>
           </div>

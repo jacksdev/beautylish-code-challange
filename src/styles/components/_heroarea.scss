@@ -15,3 +15,28 @@
   font-size: 7.2rem;
   font-family: 'CanelaWeb';
 }
+
+
+
+@media (max-width: $desktop-breakpoint) {
+
+  .heroarea{
+    background: url('../img/hero_mobile_1x.jpg') no-repeat center center;
+    background-size: auto;
+    background-size: cover;
+    text-align: left;
+    height: 564px;
+  }
+
+  .heroarea__blurb{
+    width: 70%;
+    margin: 50px 0 0 20px;
+    padding: 0 0 20px 10px;
+    background: #fff;
+    color: #f0725d;
+    font-size: 4.4rem;
+    font-family: 'CanelaWeb';
+  }
+
+
+}

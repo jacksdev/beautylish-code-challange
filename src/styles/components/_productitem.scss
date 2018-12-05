@@ -28,3 +28,32 @@
   padding: 100px 0 0 30px;
   width: 400px;
 }
+
+
+
+@media (max-width: $desktop-breakpoint) {
+
+  .productitem{
+    font-size: 1.4rem;
+    display: block;
+  }
+
+  .productitem__img{
+    width: 100%;
+  }
+
+  .productitem__description{
+    font-size: 1.6rem;
+    padding: 10px 0 0 30px;
+    width: 90%;
+  }
+
+  .productitem--reverse{
+    background: #fff;
+    color: #000;
+    font-size: 1.4rem;
+    display: block;
+    font-family: 'MarkWeb';
+  }
+
+}

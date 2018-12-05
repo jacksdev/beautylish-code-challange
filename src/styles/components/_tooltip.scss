@@ -4,8 +4,8 @@
 }
 
 .tooltiptextVisible {
-    visibility: visible;
-    width: 200px;
+    position: absolute;
+    width: 150px;
     background-color: #fff;
     color: #000;
     text-align: left;
@@ -47,6 +47,7 @@
 }
 
 .tooltiptextHidden {
+  position: absolute;
     visibility: hidden;
 }
 
@@ -54,14 +55,14 @@
 
 .tooltiptextVisible--reverse {
     visibility: visible;
-    width: 200px;
+    width: 150px;
     background-color: #fff;
     color: #000;
     text-align: left;
     border: 1px solid grey;
     padding: 20px 20px;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     left: 115%;
     opacity:0;
     transition-property: opacity;
@@ -93,4 +94,12 @@
     top: 14px;
     border-color: transparent #000 transparent transparent;
     border-width: 16px;
+}
+
+
+
+
+@media (max-width: $desktop-breakpoint) {
+
+
 }

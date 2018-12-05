@@ -5,6 +5,7 @@ const SectionIntro = ({ product }) => (
   <div className="container">
     <div className='sectionintro'>
       BY TERRY
+      <br />
       <span className='sectionintro__headline'>Limited Edition {product.name}</span>
       <br />
       {product.description}

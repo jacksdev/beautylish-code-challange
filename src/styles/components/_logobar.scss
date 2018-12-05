@@ -8,9 +8,25 @@
 .logobar__img{
   padding: 10px;
   border-right: 1px solid #fff;
+  content:url('../img/logo_desktop_1x.png');
 }
 
 .logobar__blurb{
   font-size: 1.9rem;
   margin: 10px 0 0 10px;
+}
+
+
+@media (max-width: $desktop-breakpoint) {
+
+  .logobar__img{
+    padding: 10px;
+    border-right: 1px solid #fff;
+    content:url('../img/logo_mobile_1x.png');
+  }
+
+  .logobar__blurb{
+    font-size: 1.9rem;
+    margin: 10px 0 0 10px;
+  }
 }
